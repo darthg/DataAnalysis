@@ -17,7 +17,7 @@ a=pandas.Series([8,9,2,1])
 #print(a)#序列，每个数据有一个索引，并且可以给索引命名，有点像字典
 print(a.index)
 c=pandas.DataFrame([[1,2,3,4],[2,3,4,6]])#构建数据矩阵
-
+c.values[0][1]#取得行数和列数
 
 d=pandas.DataFrame([[1,2,3,4],[2,3,4,6]],columns=["one","two","three","four"])#构建数据矩阵
 
