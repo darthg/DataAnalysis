@@ -1,6 +1,6 @@
 import pandas
 import pymysql
-
+'''
 #--------------导入CSV格式数据---------------
 fr=pandas.read_csv(r"E:\GitHub\DATAIMPORT.csv",encoding='GBK')#打开文件路径不能包含中文名，编码要选择GKB才能正确解析中文
 
@@ -23,4 +23,10 @@ print(f)
 
 
 #---------导入文本数据--------------------
-pandas.read_table()
+pandas.read_table()'''
+
+#---------导入mysql数据--------------------------
+conn=pymysql.connect(host="127.0.0.1",user="root",passwd="coldfallen525",db="world")
+sql="select * from city"
+k=pandas.read_sql(sql,conn)
+print(k)

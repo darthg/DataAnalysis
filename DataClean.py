@@ -20,7 +20,7 @@ print(data.T.values[1])
 #----------------插补空白数值
 '''
 data["ID"][(data["ID"]==1)]=None
-for i in data.columns:  #遍历列
+for i in data.columns:  #遍历表头，也就是获得了有几列到i
      for j in range(len(data)):#遍历每列的行数据
           if(data[i].isnull())[j]: #if data[i][j]==null:一样的吧？？
                data[i][j]="36"
@@ -29,5 +29,5 @@ for i in data.columns:  #遍历列
 #画散点图定位异常值
 cityname=data.T.values[1]
 population=data.T.values[4]
-pyl.plot(cityname,population,"o")
+pyl.plot(cityname,population)
 pyl.show()
